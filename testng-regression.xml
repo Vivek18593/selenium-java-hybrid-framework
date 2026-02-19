@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="OrangeHRM Regression Suite">
+    <listeners>
+        <listener class-name="org.vivek.utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="Regression - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+<!--            Dashboard Page-->
+            <class name="org.vivek.testcases.DashboardPageTest">
+                <methods>
+                    <include name="verifyUserLoginSuccessful"/>
+                    <include name="verifyMyTimesheetIsAccessible"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
