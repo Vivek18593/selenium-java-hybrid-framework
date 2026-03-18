@@ -45,7 +45,6 @@ public class BaseClass {
                 throw new IllegalArgumentException("Invalid browser: " + browser);
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get(readConfig.getBaseUrl());
 
         log = LogManager.getLogger(getClass());
